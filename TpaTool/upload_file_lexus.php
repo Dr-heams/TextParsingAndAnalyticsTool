@@ -1,6 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['IJrPSPGxDmWIoQWnsmer3pISbG0A'])){
+	include("settings.php");
 	$allowedExts = array("txt","TXT");
 	$temp = explode(".", $_FILES["file"]["name"]);
 	$extension = end($temp);
@@ -20,8 +21,6 @@ if(isset($_SESSION['IJrPSPGxDmWIoQWnsmer3pISbG0A'])){
 			$ext = array_pop( $temp );
 			$sqlname = implode( '.', $temp );
 
-
-			$con=mysqli_connect("localhost","ak5a_tpatool","password1234","ak5a_tpatool");
 			// Check connection
 			if (mysqli_connect_errno()) {
 				echo "Failed to connect to MySQL: " . mysqli_connect_error();

@@ -1,13 +1,13 @@
 <?php
 session_start();
 if(isset($_SESSION['IJrPSPGxDmWIoQWnsmer3pISbG0A'])){
-
+	include("settings.php");
 	echo "<pre><code>NOTES:\n- PHP Search isn't very smart so there may be no article text\n- all values are tab separated\n\nKEYWORDS: ";
 	echo $_POST['keywords'];
 	$keyword = explode(',', $_POST['keywords']);
 	echo "\n\n---\n\n";
 
-	$con=mysqli_connect("localhost","ak5a_tpatool","password1234","ak5a_tpatool");
+
 	// Check connection
 	if (mysqli_connect_errno()) {
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -21,11 +21,6 @@ if(isset($_SESSION['IJrPSPGxDmWIoQWnsmer3pISbG0A'])){
 	} else {
 		echo "Error creating table: " . mysqli_error($con);
 	}
-
-	$servername = "localhost";
-	$username = "ak5a_tpatool";
-	$password = "password1234";
-	$dbname = "ak5a_tpatool";
 	
 	echo "KEYWORD\t# FOUND IN MASTER LIST\t# FOUND IN ARTICLES\tPUB DATE\tARTICLE ID\tFIRST OCCURANCE AND PRECEEDING 60 CHARACTERS\n";
 	foreach($keyword as $key => $value){

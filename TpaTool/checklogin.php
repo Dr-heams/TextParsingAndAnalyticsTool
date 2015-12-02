@@ -1,15 +1,11 @@
 <?php
 
 ob_start();
-$host="localhost"; // Host name
-$username="ak5a_tpatool"; // Mysql username
-$password="password1234"; // Mysql password
-$db_name="ak5a_tpatool"; // Database name
+include("settings.php");
 $tbl_name="members"; // Table name
-
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect");
-mysql_select_db("$db_name")or die("cannot select DB");
+mysql_connect("$servername", "$username", "$password")or die("cannot connect");
+mysql_select_db("$dbname")or die("cannot select DB");
 
 // Define $myusername and $mypassword
 $myusername=$_POST['myusername'];

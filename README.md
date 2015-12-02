@@ -3,21 +3,25 @@
 The Text Parsing and Analytics Tool is a lightweight text analysis application designed to assist researchers performing content analysis on newspaper articles. This is useful for researchers who are analysing numerous sources of newspaper articles. The application takes text files and converts them to a table for analysis. 
 
 The application serves three main purposes:
-	1. Import Articles: Gather text output from discrete sources (WestLaw, LexusNexus, ProQuest) and convert the batch of articles in the text file to a table. 
-	2. Run Query A: Run a regular expression on the body text of an article to locate syntactical distinctions - the output is a list of keywords which match the criteria determined by the regular expression
-	3. Run Query B: Takes a list of keywords generated and provides additional context in a CSV file. Additional data includes: 
-		a. the article ID of the article that contained the keyword  
-		b. The total count of the keyword across 
-		c. 30 characters surrounding the keyword 
 
-Research Databases accounted		
-		
-## Version
+1. Import Articles: Gather text output from discrete sources (WestLaw, LexusNexus, ProQuest) and convert the batch of articles in the text file to a table. 
+2. Run Query A: Run a regular expression on the body text of an article to locate syntactical distinctions - the output is a list of keywords which match the criteria determined by the regular expression
+3. Run Query B: Takes a list of keywords generated and provides additional context in a CSV file. Additional data includes: 
+	-  the article ID of the article that contained the keyword  
+	-  The total count of the keyword across 
+	- 30 characters surrounding the keyword 
 
-Version 0.5 - This is an early stage application with minimal security. We recommend connecting the text parsing and analytic tool to a local database rather than a server. 
+
+## Current state of software
+- This is an early stage application with minimal security. We recommend connecting the text parsing and analytic tool to a local database rather than a server. 
+- When parsing Westlaw and ProQuest documents,  tab separated value (TSV) output will be generated suitable for entering into the main database ("Master List"), because of the stage of development only LexusNexus commits to the SQL Database
 		
 ## Installation Instruction
-AK5A to provide
+- Download this repository
+- Install "/TpaTool" folder on your server
+- Create a mySql database, user and password
+- open "/TpaTool/settings.php" and enter your database, user and password information
+- Save and run
 
 ## License
 [http://creativecommons.org/licenses/by-nc-sa/4.0/]

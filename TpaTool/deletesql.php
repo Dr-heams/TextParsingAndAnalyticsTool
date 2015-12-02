@@ -1,8 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['IJrPSPGxDmWIoQWnsmer3pISbG0A'])){
-
-	$con=mysqli_connect("localhost","ak5a_tpatool","password1234","ak5a_tpatool");
+	include("settings.php");
 	// Check connection
 	if (mysqli_connect_errno()) {
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();

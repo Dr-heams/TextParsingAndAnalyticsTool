@@ -1,15 +1,12 @@
 <?php
 session_start();
 if(isset($_SESSION['IJrPSPGxDmWIoQWnsmer3pISbG0A'])){
+	include("settings.php");
 	echo "<pre><code>NOTES:\n- all values are tab separated\n\nREGEX: ";
 	$regex = "/".$_POST['regex']."/";
 	echo $regex;
 	echo "\n\n---\n\n";
 	echo "KEYWORD FOUND\tARTICLE ID\n";
-	$servername = "localhost";
-	$username = "ak5a_tpatool";
-	$password = "password1234";
-	$dbname = "ak5a_tpatool";
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	if ($conn->connect_error) {
