@@ -211,6 +211,7 @@ a.home:hover {
 }
 
 p#navigation {
+	margin-left:10px;
 	margin-top:10px;
 	position:absolute;
 	top:0;

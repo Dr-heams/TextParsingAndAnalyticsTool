@@ -19,18 +19,20 @@ $('form input').change(function() {
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<a href="logout.php" class="logout"><img src="img/exit.svg" width="25px" style="margin-right:3px;"></a>
-<?php
-if (stripos($_SERVER['REQUEST_URI'], 'main.php')){
-     echo '<p id="navigation">
-     <strong>Import Articles</strong>
-     <br><a href="upload.php" class="home">Austin-American Statesman</a>
-     <br><a href="upload_dmn.php" class="home" >Dallas Morning News</a>
-     <br><a href="upload_to.php" class="home" >Texas Observer</a>
-     <br><br><strong>Querys</strong>
+<a href="logout.php" class="logout"><img src="img/exit.svg" width="25px" style="margin-right:3px;margin-top:5px;"></a>
+<p id="navigation">
+	 <strong>Home</strong>
+	 <br><a href="main.php" class="home">Main</a>
+     <br><br><strong>Import Articles</strong>
+     <br><a href="upload_lexus.php" class="home">LexusNexus (to SQL)</a>
+     <br><a href="upload_westlaw.php" class="home" >Westlaw (to TSV)</a>
+     <br><a href="upload_proquest.php" class="home" >ProQuest (to TSV)</a>
+     <br><br><strong>Sample Formats</strong>
+     <br><a href="sampleFiles/LexusNexus_Sample_Format.txt" class="home" >LexusNexus Sample</a>
+     <br><a href="sampleFiles/ProQuest_Sample_Format.txt" class="home" >ProQuest Sample</a>
+     <br><a href="sampleFiles/Westlaw_Sample_Format.txt" class="home" >Westlaw Sample</a>     
+     <br><br><br><br><strong>Querys</strong>
      <br><a href="keywordquery1.php" class="home" >KeywordQuery v1</a>
-     <br><a href="regexquery1.php" class="home" >RegExQuery v1</a>';
-}else{
-     echo '<a href="main.php" class="home"><img src="img/home.svg" width="20px" style="margin-top:5px;margin-left:5px;"></a>';
-}
-?>
+     <br><a href="regexquery1.php" class="home" >RegExQuery v1</a>
+	 
+</p>

@@ -1,19 +1,19 @@
 <?php
 
 ob_start();
-$host="localhost"; // Host name 
-$username="ak5a_lexnex"; // Mysql username 
-$password="G77wSvdUcNT01O7lJ"; // Mysql password 
-$db_name="ak5a_lexnex"; // Database name 
-$tbl_name="members"; // Table name 
+$host="localhost"; // Host name
+$username="ak5a_tpatool"; // Mysql username
+$password="password1234"; // Mysql password
+$db_name="ak5a_tpatool"; // Database name
+$tbl_name="members"; // Table name
 
 // Connect to server and select databse.
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
-// Define $myusername and $mypassword 
-$myusername=$_POST['myusername']; 
-$mypassword=$_POST['mypassword']; 
+// Define $myusername and $mypassword
+$myusername=$_POST['myusername'];
+$mypassword=$_POST['mypassword'];
 $IJrPSPGxDmWIoQWnsmer3pISbG0A = 'YES';
 
 // To protect MySQL injection (more detail about MySQL injection)
@@ -29,13 +29,12 @@ $count=mysql_num_rows($result);
 
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
-
-// Register $myusername, $mypassword and redirect to file "login_success.php"
-session_register("IJrPSPGxDmWIoQWnsmer3pISbG0A");
-header("location:main.php");
+	// Register $myusername, $mypassword and redirect to file "login_success.php"
+	session_register("IJrPSPGxDmWIoQWnsmer3pISbG0A");
+	header("location:main.php");
 }
 else {
-echo "Wrong Username or Password";
+	echo "Wrong Username or Password";
 }
 ob_end_flush();
 ?>
