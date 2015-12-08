@@ -1,6 +1,6 @@
 # Text Parsing and Analytics Tool 
 
-The Text Parsing and Analytics Tool is a lightweight text analysis application designed to assist researchers performing content analysis on newspaper articles. This is useful for researchers who are analysing numerous sources of newspaper articles. The application takes text files and converts them to a table for analysis. 
+The Text Parsing and Analytics Tool is a lightweight text analysis application designed to assist researchers performing content analysis on newspaper articles. This is useful for researchers who are analyzing numerous sources of newspaper articles. The application takes text files and converts them to a table for analysis. 
 
 The application serves three main purposes:
 
